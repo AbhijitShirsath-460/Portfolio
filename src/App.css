@@ -50,6 +50,30 @@
   --z-modal: 1000;
 }
 
+/*========== Dark Theme (Stealth Navy) ==========*/
+body.dark-theme {
+  --title-color: #f8fafc;
+  --title-color-dark: #ffffff;
+  --text-color: #94a3b8;
+  --body-color: #030712;
+  --container-color: #111827;
+}
+
+/* Smooth transition for theme switching */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.services_content,
+.contact_card,
+.skills_content,
+.qualification_content,
+.testimonial_card,
+.footer,
+.header {
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
 /* Responsive typography */
 @media screen and (max-width: 992px) {
   :root {
@@ -72,6 +96,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
 }
 
 body,
@@ -154,14 +179,49 @@ img {
   padding: 1.25rem 2rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
 }
 
 .button:hover {
   background-color: var(--title-color-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  transform: translateY(-1px);
+}
+
+/* Shine Effect */
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.button:hover::after {
+  left: 100%;
 }
 
 .button__icon {
   margin-left: var(--mb-0-5);
+  transition: transform 0.3s ease;
+}
+
+.button:hover .button__icon {
+  transform: translateX(5px) rotate(-10deg);
 }
 
 .button--flex {
@@ -202,10 +262,7 @@ img {
   }
 }
 
-@media screen and (max-width: 576px) {
-
-
-}
+@media screen and (max-width: 576px) {}
 
 /* For small devices */
 @media screen and (max-width: 400px) {
@@ -218,5 +275,3 @@ img {
     margin-right: var(--mb-1);
   }
 }
-
-

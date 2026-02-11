@@ -1,4 +1,4 @@
-import React from "react";
+import Typewriter from "typewriter-effect";
 
 const Data = () => {
   return (
@@ -6,9 +6,23 @@ const Data = () => {
       <h1 className="home_title">Abhijit Shrsath</h1>
 
       <h3 className="home_subtitle">
-        I'm a <span>Full Stack Developer (MERN & AI)</span>
+        I'm a{" "}
+        <Typewriter
+          options={{
+            strings: [
+              "Full Stack Developer (MERN & AI)",
+              "MERN Stack Specialist",
+              "AI Enthusiast",
+            ],
+            autoStart: true,
+            loop: true,
+            delay: 75,
+            deleteSpeed: 50,
+            wrapperClassName: "typewriter-wrapper",
+            cursorClassName: "typewriter-cursor",
+          }}
+        />
       </h3>
-      {/* <h3 className='home_subtitle'>I Am <span>Fullstack Developer</span></h3> */}
 
       <p className="home_description">
         Full Stack (MERN) Developer passionate about creating intelligent and

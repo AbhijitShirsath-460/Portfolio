@@ -8,65 +8,65 @@ import toast from "react-hot-toast";
 const Contact = () => {
   const form = useRef();
 
-//   const sendEmail = (e) => {
-//     e.preventDefault();
+  //   const sendEmail = (e) => {
+  //     e.preventDefault();
 
-//     emailjs.sendForm("service_646acfs","template_29ki66y",form.current,"P4kt3Uzr31h6-ndR5")
-//       .then((result) => {
-//           console.log(result.text);
-//           toast.success("Message Sent Successfully!");
-//         },
-//         (error) => {
-//           console.log(error.text);
-//           toast.error("Failed to send message, try again!");
-//         }
-//       );
-//     e.target.reset();
-//   };
-  
-const sendEmail = (e) => {
-  e.preventDefault();
+  //     emailjs.sendForm("service_646acfs","template_29ki66y",form.current,"P4kt3Uzr31h6-ndR5")
+  //       .then((result) => {
+  //           console.log(result.text);
+  //           toast.success("Message Sent Successfully!");
+  //         },
+  //         (error) => {
+  //           console.log(error.text);
+  //           toast.error("Failed to send message, try again!");
+  //         }
+  //       );
+  //     e.target.reset();
+  //   };
 
-  const formData = new FormData(form.current);
-  const userEmail = formData.get("email");
-  const userName = formData.get("name");
-  const userProject = formData.get("project");
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  // 1️⃣ SEND TO ADMIN
-  emailjs
-    .sendForm(
-      "service_646acfs",
-      "template_29ki66y", // admin template
-      form.current,
-      "P4kt3Uzr31h6-ndR5"
-    )
-    .then(() => {
-      toast.success("Message Sent Successfully!");
+    const formData = new FormData(form.current);
+    const userEmail = formData.get("email");
+    const userName = formData.get("name");
+    const userProject = formData.get("project");
 
-      // 2️⃣ SEND AUTO-REPLY TO USER
-      return emailjs.send(
+    // 1️⃣ SEND TO ADMIN
+    emailjs
+      .sendForm(
         "service_646acfs",
-        "template_mtvru0n", // user auto-reply template
-        {
-          name: userName,
-          email: userEmail,
-          project: userProject,
-        },
+        "template_29ki66y", // admin template
+        form.current,
         "P4kt3Uzr31h6-ndR5"
-      );
-    })
-    .then(() => {
-      console.log("Auto reply sent to user");
-    })
-    .catch((error) => {
-      console.error(error);
-      toast.error("Failed to send message, try again!");
-    });
+      )
+      .then(() => {
+        toast.success("Message Sent Successfully!");
 
-  e.target.reset();
-};
+        // 2️⃣ SEND AUTO-REPLY TO USER
+        return emailjs.send(
+          "service_646acfs",
+          "template_mtvru0n", // user auto-reply template
+          {
+            name: userName,
+            email: userEmail,
+            project: userProject,
+          },
+          "P4kt3Uzr31h6-ndR5"
+        );
+      })
+      .then(() => {
+        console.log("Auto reply sent to user");
+      })
+      .catch((error) => {
+        console.error(error);
+        toast.error("Failed to send message, try again!");
+      });
 
-return (
+    e.target.reset();
+  };
+
+  return (
     <section className="contact section" id="contact" data-aos="zoom-in-up">
       <h2 className="section__title">Get in touch</h2>
       <span className="section__subtitle">Contact Me</span>
@@ -112,14 +112,26 @@ return (
             </div>
             {/* instagram */}
             <div className="contact_card">
-              {/* <i class="uil uil-instagram contact_card-icon"></i> */}
               <i className="bx bxl-instagram contact_card-icon instagram"></i>
 
               <h3 className="contact_card-title">Instagram</h3>
 
               <span className="contact_card-data">abhijitshirsath080322</span>
 
-              <a href="www.instagram.com" className="contact_button">
+              <a href="https://www.instagram.com/abhijitshirsath080322/" className="contact_button" target="_blank" rel="noreferrer">
+                Write me
+                <i className="bx bx-right-arrow-alt  contact_button-icon"></i>
+              </a>
+            </div>
+            {/* github */}
+            <div className="contact_card">
+              <i className="bx bxl-github contact_card-icon github"></i>
+
+              <h3 className="contact_card-title">GitHub</h3>
+
+              <span className="contact_card-data">AbhijitShirsath-460</span>
+
+              <a href="https://github.com/AbhijitShirsath-460" className="contact_button" target="_blank" rel="noreferrer">
                 Write me
                 <i className="bx bx-right-arrow-alt  contact_button-icon"></i>
               </a>

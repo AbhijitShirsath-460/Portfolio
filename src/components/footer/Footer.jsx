@@ -27,18 +27,16 @@ const Footer = () => {
 
                 <div className="footer_social">
 
-                    <a href="" className="footer_social-link" target='blank'>   
-                    {/* "https://www.instagram.com" */}
+                    <a href="https://www.instagram.com/abhijitshirsath080322/" className="footer_social-link" target='blank'>
                         <i className="bx bxl-instagram"></i>
                     </a>
 
-                    <a href="web.whatsapp.com" className="footer_social-link" target='blank'>
-                        <i className="uil uil-whatsapp"></i>
+                    <a href="https://api.whatsapp.com/send?phone=9767330698" className="footer_social-link" target='blank'>
+                        <i className="bx bxl-whatsapp"></i>
                     </a>
 
-                    <a href="https://github.com/" className="footer_social-link" target='blank'>
-
-                        <i className="bx bxl-github-alt"></i>
+                    <a href="https://github.com/AbhijitShirsath-460" className="footer_social-link" target='blank'>
+                        <i className="bx bxl-github"></i>
                     </a>
 
                 </div>

@@ -68,7 +68,7 @@
 
     } */
 
-    /* outline-offset: 5px;
+/* outline-offset: 5px;
       width: 30px;
     height: 30px;
     background: #f09433;
@@ -84,55 +84,57 @@
 /* Base icon style */
 /* Base icon style */
 .home_social-icon {
-  font-size: 1.5rem;
-  color: var(--title-color);
-  transition: all 0.4s ease;
-  margin-right: 1rem;
+    font-size: 1.5rem;
+    color: var(--title-color);
+    transition: all 0.4s ease;
+    margin-right: 1rem;
 }
 
 /* Hover zoom + gradient color effect */
 .home_social-icon:hover {
-  transform: scale(1.25);
-  /* background: linear-gradient(45deg, #30CFD0, #330867); */
-  /* -webkit-background-clip: text;
+    transform: scale(1.25);
+    /* background: linear-gradient(45deg, #30CFD0, #330867); */
+    /* -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
-  animation: glowPulse 2s infinite alternate;
+    animation: glowPulse 2s infinite alternate;
 }
 
 
 /* Keyframes for glowing gradient pulse */
 @keyframes glowPulse {
-  0% {
-    text-shadow: 0 0 5px #30CFD0, 0 0 10px #30CFD0, 0 0 20px #330867;
-  }
-  50% {
-    text-shadow: 0 0 15px #30CFD0, 0 0 30px #330867, 0 0 45px #30CFD0;
-  }
-  100% {
-    text-shadow: 0 0 5px #30CFD0, 0 0 10px #330867, 0 0 20px #30CFD0;
-  }
+    0% {
+        text-shadow: 0 0 5px #30CFD0, 0 0 10px #30CFD0, 0 0 20px #330867;
+    }
+
+    50% {
+        text-shadow: 0 0 15px #30CFD0, 0 0 30px #330867, 0 0 45px #30CFD0;
+    }
+
+    100% {
+        text-shadow: 0 0 5px #30CFD0, 0 0 10px #330867, 0 0 20px #30CFD0;
+    }
 }
 
 
 /* Platform-specific colors + pulsing glow */
 .home_social-icon.linkedin:hover {
-  color: #0077B5;
-  animation: glowPulse 1.8s infinite alternate;
+    color: #0077B5;
+    animation: glowPulse 1.8s infinite alternate;
 }
 
 .home_social-icon.instagram:hover {
-  color: #E1306C;
-  animation: glowPulse 1.8s infinite alternate;
+    color: #E1306C;
+    animation: glowPulse 1.8s infinite alternate;
 }
 
 .home_social-icon.whatsapp:hover {
-  color: #25D366;
-  animation: glowPulse 1.8s infinite alternate;
+    color: #25D366;
+    animation: glowPulse 1.8s infinite alternate;
 }
 
 .home_social-icon.github:hover {
-  color: #000000;
-  animation: glowPulse 1.8s infinite alternate;
+    color: #000000;
+    animation: glowPulse 1.8s infinite alternate;
 }
 
 .home_title {
@@ -168,16 +170,33 @@
 } */
 
 .home_subtitle {
-
     position: relative;
     font-size: var(--h3-font-size);
     padding-left: 5.4rem;
-    /* font-weight: var(--font-normal); */
     margin-bottom: var(--mb-1);
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.typewriter-wrapper {
     background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
+    font-weight: var(--font-semi-bold);
+}
 
+.typewriter-cursor {
+    color: #30CFD0;
+    font-weight: var(--font-normal);
+    animation: typewriter_blink 1s infinite;
+}
+
+@keyframes typewriter_blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 .home_subtitle::before {
