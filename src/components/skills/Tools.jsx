@@ -1,87 +1,82 @@
 import React from "react";
 
-const Frontend = () => {
+const Tools = () => {
   return (
     <div className="skills__content" data-aos="zoom-in">
-      <h3 className="skills__title">Frontend Developer</h3>
-
+      <h3 className="skills__title">Tools & Others</h3>
       <div className="skills__box">
         <div className="skills__group">
-          {/* HTML */}
+          {/* Version Control Git  */}
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
-
             <div>
-              <h3 className="skills__name">HTML</h3>
-              <span className="skills_level">Advanced</span>
+              <h3 className="skills__name">Git / GitHub</h3>
+              <span className="skills_level">Intermediate</span>
             </div>
           </div>
 
-          {/* CSS */}
+          {/* Postman */}
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
-
             <div>
-              <h3 className="skills__name">CSS</h3>
+              <h3 className="skills__name">Postman</h3>
               <span className="skills_level">Advanced</span>
             </div>
           </div>
-
-          {/* JAVASCRIPT */}
+          {/* VS Code */}
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
-
             <div>
-              <h3 className="skills__name">JavaScript (ES6+)</h3>
+              <h3 className="skills__name">VS Code</h3>
               <span className="skills_level">Advanced</span>
+            </div>
+          </div>
+          {/* DOCKER */}
+          <div className="skills__data">
+            <i className="bx bx-badge-check"></i>
+            <div>
+              <h3 className="skills__name">Docker</h3>
+              <span className="skills_level">Intermediate</span>
             </div>
           </div>
         </div>
-
         <div className="skills__group">
-          {/* REACTJS */}
+          {/* FIGMA */}
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
-
             <div>
-              <h3 className="skills__name">Reactjs</h3>
+              <h3 className="skills__name">Figma / UI Tools</h3>
+              <span className="skills_level">Basic</span>
+            </div>
+          </div>
+          {/* NPM */}
+          <div className="skills__data">
+            <i className="bx bx-badge-check"></i>
+            <div>
+              <h3 className="skills__name">NPM / Package Mgmt</h3>
               <span className="skills_level">Intermediate</span>
             </div>
           </div>
-
-          {/* BOOTSTRAP */}
+          {/* CHROME DEV TOOLS */}
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
-
             <div>
-              <h3 className="skills__name">Bootstrap</h3>
-              <span className="skills_level">Intermediate</span>
-            </div>
-          </div>
-
-          {/* TAILWIND CSS */}
-          <div className="skills__data">
-            <i className="bx bx-badge-check"></i>
-
-            <div>
-              <h3 className="skills__name">Tailwind CSS</h3>
+              <h3 className="skills__name">Responsive Design</h3>
               <span className="skills_level">Advanced</span>
             </div>
           </div>
-
-          {/* <div className="skills__data">
-
-                        <i className="bx bx-badge-check"></i>
-
-                        <div>
-                            <h3 className="skills__name">Git / GitHub</h3>
-                            <span className="skills_level">Intermediate</span>
-                        </div>
-                    </div> */}
+          {/* REACT DEV TOOL */}
+          <div className="skills__data">
+            <i className="bx bx-badge-check"></i>
+            <div>
+              <h3 className="skills__name">React Dev Tools</h3>
+              <span className="skills_level">Intermediate</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Frontend;
+export default Tools;

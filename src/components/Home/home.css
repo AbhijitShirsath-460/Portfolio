@@ -53,20 +53,20 @@
 
 }
 
-.home_social-icon {
+/* .home_social-icon {
     font-size: 1.25rem;
     color: var(--title-color);
 
-}
+} */
 
-.instagram {
+/* .instagram {
 
     color: var(--title-color);
-    /* outline: 2px solid black; */
+    outline: 2px solid black; comment this line
     border-radius: 45%; 
-    /* outline-offset: calc(200/-2); */
+    outline-offset: calc(200/-2); comment this line
 
-    }
+    } */
 
     /* outline-offset: 5px;
       width: 30px;
@@ -77,10 +77,62 @@
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1) */
 
-.home_social-icon:hover {
-    transition: all 0.5s;
-      
+/* .home_social-icon:hover {
+    transition: all 0.5s;   
+} */
 
+/* Base icon style */
+/* Base icon style */
+.home_social-icon {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  transition: all 0.4s ease;
+  margin-right: 1rem;
+}
+
+/* Hover zoom + gradient color effect */
+.home_social-icon:hover {
+  transform: scale(1.25);
+  /* background: linear-gradient(45deg, #30CFD0, #330867); */
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  animation: glowPulse 2s infinite alternate;
+}
+
+
+/* Keyframes for glowing gradient pulse */
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 5px #30CFD0, 0 0 10px #30CFD0, 0 0 20px #330867;
+  }
+  50% {
+    text-shadow: 0 0 15px #30CFD0, 0 0 30px #330867, 0 0 45px #30CFD0;
+  }
+  100% {
+    text-shadow: 0 0 5px #30CFD0, 0 0 10px #330867, 0 0 20px #30CFD0;
+  }
+}
+
+
+/* Platform-specific colors + pulsing glow */
+.home_social-icon.linkedin:hover {
+  color: #0077B5;
+  animation: glowPulse 1.8s infinite alternate;
+}
+
+.home_social-icon.instagram:hover {
+  color: #E1306C;
+  animation: glowPulse 1.8s infinite alternate;
+}
+
+.home_social-icon.whatsapp:hover {
+  color: #25D366;
+  animation: glowPulse 1.8s infinite alternate;
+}
+
+.home_social-icon.github:hover {
+  color: #000000;
+  animation: glowPulse 1.8s infinite alternate;
 }
 
 .home_title {
@@ -100,6 +152,7 @@
 
 
 }
+
 
 /* @keyframes gradient {
     
